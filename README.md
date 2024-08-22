@@ -25,7 +25,7 @@ This parameters can be set through environment variables:
 
 ### .stylelintrc
 By default, action will try to find an existing configuration file in the project.  
-If the configuration file will not found, it will be created with the next configuration:
+If the configuration file is not found, it will be created with the next configuration:
 
 ```json
 {
@@ -37,8 +37,8 @@ If the configuration file will not found, it will be created with the next confi
 ```
 
 ### File pattern
-If you want to specify which file or types must be validated.  
-You need to pass the pattern as a `PATTERN` variable.
+If you want to specify which file or types must be validated,
+you need to pass the pattern as a `PATTERN` variable.
 By default, it will try to find `*.css`.
 
 ### Indentation
@@ -63,7 +63,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - uses: actions-hub/stylelint@master
 ```
 
@@ -78,7 +78,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - uses: actions-hub/stylelint@master
         env:
           PATTERN: "*.scss"
